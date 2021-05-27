@@ -1,0 +1,16 @@
+table {
+    border: solid #333;
+    text-align: center;
+    line-height: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+thead {
+    font-size: 1.3rem
+}
+
+#main_th {
+    background-color: #333;
+    color: #e7e7e7
+}
+

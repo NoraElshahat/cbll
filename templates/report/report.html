@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download orders</title>
+    <style>
+    
+    table {
+        border: solid #333;
+        text-align: center;
+        line-height: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    th{
+        font-size: 1.3rem;
+        background-color: #333 ;
+        color: #e7e7e7
+    }
+
+    #main_th {
+        background-color: #333;
+        color: #e7e7e7;
+        border-bottom: 2px white;
+    }
+    </style>
+
+</head>
+<body>
+    <table>
+        <thead>
+                <th id='main_th' colspan=4 >
+                    CBL UNITS REPORT GENERATED AT  {{time}} 
+                </th>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Some info
+                </th>
+                <th>
+                    Some info
+                </th>
+                <th>
+                    Some info
+                </th>
+            </tr>
+        </thead>
+    <tbody>
+    {% for  row in data %}
+        <tr>
+            <td> {{row.name}} </td>
+            <td> {{row.created_at}} </td>
+            <td> {{row.visit}} </td>
+            <td> {{row.user}} </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        {% if not data %}
+                    No data
+        {% endif %}
+
+</body>
+</html>
